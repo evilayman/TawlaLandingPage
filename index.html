@@ -2,11 +2,21 @@
 <html>
 <body>
 
-<h1>My first PHP page</h1>
+<p id="demo"></p>
+<button onclick="myFunction()">Play</button>
 
-<?php
-echo "Hello World!";
-?>
+<script>
+var str = window.location.href;
+var res = str.split("?");
+document.getElementById("demo").innerHTML = res[res.length - 1];
+
+function myFunction() 
+{
+  document.getElementById("demo").style.color = "red";
+  var url = "tawladl://mylink?" + document.getElementById("demo").innerHTML;
+  window.open(url); 
+}
+</script>
 
 </body>
 </html>
