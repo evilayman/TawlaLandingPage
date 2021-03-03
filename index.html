@@ -11,7 +11,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 24px;
+  font-size: 25px;
   margin: 4px 2px;
   cursor: pointer;
 }
@@ -21,18 +21,25 @@
 <h1>
 <p id="demo"></p>
 </h1>
-<button class="button" onclick="myFunction()">Play</button>
+<button class="button" onclick="playFunction()">Play</button>
+<br>
+<button class="button" onclick="downloadFunction()">Download</button>
 
 <script>
 var str = window.location.href;
 var res = str.split("?");
 document.getElementById("demo").innerHTML = res[res.length - 1];
 
-function myFunction() 
+function playFunction() 
 {
   document.getElementById("demo").style.color = "red";
   var url = "tawladl://mylink?" + document.getElementById("demo").innerHTML;
   window.open(url); 
+}
+
+function downloadFunction() 
+{
+  window.open("https://play.google.com/store"); 
 }
 </script>
 
