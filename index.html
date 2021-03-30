@@ -36,11 +36,12 @@
 <!-- <button class="button" onclick="downloadFunction()">Download</button> -->
 
 <script>
-var str = window.location.href;
-var res = str.split("?");
+
 
 function playFunction() 
 {
+  var str = window.location.href;
+  var res = str.split("?");
   document.getElementById("demo").style.color = "red";
   var roomCode = "mylink?" + res[res.length - 1];
   var fallbackWebsite = "https://play.google.com/store";
