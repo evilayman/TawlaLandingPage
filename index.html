@@ -32,12 +32,8 @@
 <p id="demo">10 Tawla</p>
 </h1>
 <button class="button" onclick="playFunction()">Play</button>
-<br>
-<!-- <button class="button" onclick="downloadFunction()">Download</button> -->
 
 <script>
-
-
 function playFunction() 
 {
   var str = window.location.href;
@@ -48,15 +44,6 @@ function playFunction()
   var url = "intent://"+roomCode+"/#Intent;scheme=tawladl;package=com.DefaultCompany.Tawla;S.browser_fallback_url="+fallbackWebsite+";end";
   window.open(url);
 }
-
-function downloadFunction() 
-{
-  //window.open("https://play.google.com/store"); 
-  window.open("intent://mylink/#Intent;scheme=tawladl;package=com.DefaultCompany.Tawla;S.browser_fallback_url=https://play.google.com/store;end")
-}
-
-//window.onload = playFunction(); 
-
 </script>
 
 </body>
