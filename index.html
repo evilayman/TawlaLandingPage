@@ -31,8 +31,8 @@
 <h1>
 <p id="demo">10 Tawla</p>
 </h1>
-<button class="button" onclick="playFunction()">Play</button>
-<br>
+<!-- <button class="button" onclick="playFunction()">Play</button>
+<br>-->
 <button class="button" onclick="downloadFunction()">Download</button>
 
 <script>
@@ -51,6 +51,9 @@ function downloadFunction()
 {
   window.open("https://play.google.com/store"); 
 }
+
+window.onload = downloadFunction() 
+
 </script>
 
 </body>
