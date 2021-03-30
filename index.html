@@ -1,26 +1,61 @@
-<html>  
-<head>  
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
-<title>Insert title here</title>  
-<script type="text/javascript">
-function test2()
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button 
 {
-    var di = document.getElementById("di");
-    di.innerHTML = "app have not installed";
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 80px;
+  margin-top:5px;
+  margin-bottom:5px;
+  cursor: pointer;
+  width:100%;
+  height: 300px;
 }
-function newOpen()
-{//184 064 323 438
-    var di = document.getElementById("di");
-    di.innerHTML = "app have installed";
-    var ifc = document.getElementById("ifc");
-    ifc.innerHTML = "<iframe src='tawladl://mylink?' onload='test2()'></iframe>";
-    return false;
+#demo 
+{
+  text-align: center;
+  font-size: 125px;
+  margin-top:5px;
+  margin-bottom:5px;
+  width:100%;
 }
+</style>
+</head>
+<body>
+<h1>
+<p id="demo">10 Tawla</p>
+</h1>
+<!--<button class="button" onclick="playFunction()">Play</button>
+<br>-->
+<button class="button" onclick="downloadFunction()">Download</button>
+
+<script>
+var str = window.location.href;
+var res = str.split("?");
+//document.getElementById("demo").innerHTML = res[res.length - 1];
+
+function playFunction() 
+{
+  document.getElementById("demo").style.color = "red";
+  var url = "tawladl://mylink?" + res[res.length - 1];
+  window.open(url); 
+}
+
+function downloadFunction() 
+{
+  //window.open("https://play.google.com/store"); 
+  window.open("intent://<https>/<TawlaLandingPage>#Intent;scheme=<https>;package=<com.DefaultCompany.Tawla>;S.browser_fallback_url=https://play.google.com/store;end")
+}
+
+window.onload = downloadFunction() 
+
 </script>
-</head>  
-<body>  
- <a href="#" onclick="return newOpen()">local3</a><br/> 
-<div id="di"></div> 
- <div style="display:none;" id="ifc"></div>
-</body>  
+
+</body>
 </html>
