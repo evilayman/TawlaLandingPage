@@ -43,15 +43,14 @@ var res = str.split("?");
 function playFunction() 
 {
   document.getElementById("demo").style.color = "red";
-  //var url = "tawladl://mylink?" + res[res.length - 1];
-  var url = "https://evilayman.github.io/TawlaLandingPage/?" + res[res.length - 1];
+  var url = "tawladl://mylink?" + res[res.length - 1];
   window.open(url);
 }
 
 function downloadFunction() 
 {
   //window.open("https://play.google.com/store"); 
-  window.open("intent://<evilayman.github.io>/<TawlaLandingPage>#Intent;scheme=<https>;package=<com.DefaultCompany.Tawla>;S.browser_fallback_url=https://play.google.com/store;end")
+  window.open("intent://<evilayman.github.io>/<TawlaLandingPage>#Intent;scheme=<tawladl>;package=<com.DefaultCompany.Tawla>;S.browser_fallback_url=https://play.google.com/store;end")
 }
 
 //window.onload = downloadFunction() 
