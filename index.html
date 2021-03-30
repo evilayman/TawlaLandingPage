@@ -31,8 +31,8 @@
 <h1>
 <p id="demo">10 Tawla</p>
 </h1>
-<!--<button class="button" onclick="playFunction()">Play</button>
-<br>-->
+<button class="button" onclick="playFunction()">Play</button>
+<br>
 <button class="button" onclick="downloadFunction()">Download</button>
 
 <script>
@@ -43,7 +43,8 @@ var res = str.split("?");
 function playFunction() 
 {
   document.getElementById("demo").style.color = "red";
-  var url = "tawladl://mylink?" + res[res.length - 1];
+  //var url = "tawladl://mylink?" + res[res.length - 1];
+  var url = "https://evilayman.github.io/mylink?" + res[res.length - 1];
   window.open(url); 
 }
 
