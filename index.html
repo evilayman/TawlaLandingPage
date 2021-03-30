@@ -34,12 +34,12 @@
 <button class="button" onclick="playFunction()">Play</button>
 <br>
 <button class="button" onclick="downloadFunction()">Download</button>
+<a href="intent://mylink?/#Intent;scheme=<tawladl>;package=<com.DefaultCompany.Tawla>;S.browser_fallback_url=https://play.google.com/store;end">Anchor text</a>
 
 <script>
 var str = window.location.href;
 var res = str.split("?");
 //document.getElementById("demo").innerHTML = res[res.length - 1];
-
 function playFunction() 
 {
   document.getElementById("demo").style.color = "red";
