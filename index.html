@@ -40,7 +40,7 @@ function playFunction()
   var res = str.split("?");
   document.getElementById("demo").style.color = "red";
   var roomCode = "mylink?" + res[res.length - 1];
-  var fallbackWebsite = "https://play.google.com/store";
+  var fallbackWebsite = "https://play.google.com/store/apps/details?id=com.DefaultCompany.Tawla";
   var url = "intent://"+roomCode+"#Intent;scheme=tawladl;package=com.DefaultCompany.Tawla;S.browser_fallback_url="+fallbackWebsite+";end";
   window.open(url);
 }
