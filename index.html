@@ -44,6 +44,7 @@ function playFunction()
   var platform = getMobileOperatingSystem();
   var fallbackWebsite = "https://play.google.com/store/apps/details?id=com.EgyptGames2022.Tawla";
   if (platform == "iOS") fallbackWebsite = "https://www.apple.com/eg/app-store/";
+  print(platform);
   var url = "intent://"+roomCode+"#Intent;scheme=tawladl;package=com.EgyptGames2022.Tawla;S.browser_fallback_url="+fallbackWebsite+";end";
   window.open(url);
 }
