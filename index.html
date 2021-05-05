@@ -40,9 +40,39 @@ function playFunction()
   var res = str.split("?");
   document.getElementById("demo").style.color = "red";
   var roomCode = "mylink?" + res[res.length - 1];
+  
+  var platform = getMobileOperatingSystem();
   var fallbackWebsite = "https://play.google.com/store/apps/details?id=com.EgyptGames2022.Tawla";
+  if (platform == "iOS") fallbackWebsite = "https://www.apple.com/eg/app-store/";
   var url = "intent://"+roomCode+"#Intent;scheme=tawladl;package=com.EgyptGames2022.Tawla;S.browser_fallback_url="+fallbackWebsite+";end";
   window.open(url);
+}
+
+/**
+ * Determine the mobile operating system.
+ * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
+ *
+ * @returns {String}
+ */
+function getMobileOperatingSystem()
+{
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
 }
 </script>
 
