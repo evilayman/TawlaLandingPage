@@ -42,9 +42,9 @@ function playFunction()
   var roomCode = "mylink?" + res[res.length - 1];
   
   var platform = getMobileOperatingSystem();
-  var fallbackWebsite = "https://play.google.com/store/apps/details?id=com.EgyptGames2022.Tawla";
+  var fallbackWebsite = "https://play.google.com/store/apps/details?id=com.EgyptGames.Tawla";
   if (platform == "iOS") fallbackWebsite = "https://www.apple.com/eg/app-store/";
-  var url = "intent://"+roomCode+"#Intent;scheme=tawladl;package=com.EgyptGames2022.Tawla;S.browser_fallback_url="+fallbackWebsite+";end";
+  var url = "intent://"+roomCode+"#Intent;scheme=tawladl;package=com.EgyptGames.Tawla;S.browser_fallback_url="+fallbackWebsite+";end";
   window.open(url);
 }
 
